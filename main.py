@@ -53,5 +53,4 @@ if __name__ == '__main__':
     plt.ylabel('True Positive Rate')
     plt.title('ROC Curves')
     plt.legend(loc='lower right')
-    plt.savefig('results/roc/test.jpg', dpi=1200, bbox_inches='tight')
     plt.show()
