@@ -33,19 +33,6 @@ def Train(directory, epochs, aggregator, embedding_size, layers, dropout, slope,
     sample_disease_vertices = [disease_ids_invmap[id_] for id_ in samples[:, 1]]
     sample_mirna_vertices = [mirna_ids_invmap[id_] + ID.shape[0] for id_ in samples[:, 0]]
 
-    # # Generate the list of miRNAs for each disease in training/testing set
-    # M_train = []
-    # M_test = []
-    # disease_ids = list(set(samples_df['disease'].values.squeeze()))
-    # for d_id in disease_ids:
-    #     disease_ratings = samples_df[samples_df['disease'] == d_id]
-    #     M_train.append(np.array(
-    #         [mirna_ids_invmap[i] for i in disease_ratings[disease_ratings['train'] == 1]['miRNA'].values]
-    #     ))
-    #     M_test.append(np.array(
-    #         [mirna_ids_invmap[i] for i in disease_ratings[disease_ratings['test'] == 1]['miRNA'].values]
-    #     ))
-
     kf = KFold(n_splits=5, shuffle=True, random_state=random_seed)
     train_index = []
     test_index = []
