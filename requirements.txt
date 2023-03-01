@@ -1,4 +1,4 @@
-mxnet == 1.6.0
+mxnet == 1.9.1
 dgl == 0.4.3post1
 pandas == 1.0.3
 numpy == 1.16.6
